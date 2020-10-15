@@ -71,8 +71,8 @@ class Player {
 }
 
 export default new Player({
-  styleQuery: '#demo2',
-  sourceCodeQuery: '#demo',
+  styleQuery: '#styleTag',
+  sourceCodeQuery: '#code',
 
   btnPause: '#btnPause',
   btnPlay: '#btnPlay',

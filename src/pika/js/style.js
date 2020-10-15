@@ -1,11 +1,21 @@
-const string = `.skin *{box-sizing: border-box;margin: 0;padding: 0;}
-.skin *::before, .skin *::after{box-sizing: border-box;}
-
+const string = `.skin *{
+  box-sizing: border-box;
+  margin: 0;padding: 0;
+}
+.skin *::before, .skin *::after{
+  box-sizing: border-box;
+}
+/*
+ * 首先，加个背景，显得不孤单
+ */
 .skin{
   background: #ffe600;
   min-height: 50vh;
   position: relative;
 }
+/*
+ * 接下来，画皮卡丘的鼻子
+ */
 .nose{
   border: 10px solid black;
   border-color: black transparent transparent;
@@ -47,7 +57,9 @@ const string = `.skin *{box-sizing: border-box;margin: 0;padding: 0;}
   border-radius: 10px 10px 0 0;
   background: black;
 }
-
+/*
+ * 接下来，画皮卡丘的眼睛
+ */
 .eye {
   border: 2px solid #000;
   width: 64px;
@@ -59,6 +71,9 @@ const string = `.skin *{box-sizing: border-box;margin: 0;padding: 0;}
   background: #2e2e2e;
   border-radius: 50%;
 }
+/*
+ * 然后是眼球
+ */
 .eye::before{
   content: '';
   display: block;
@@ -71,12 +86,21 @@ const string = `.skin *{box-sizing: border-box;margin: 0;padding: 0;}
   left: 4px;
   top: 2px;
 }
+/*
+ * 左眼在左边（废话）
+ */
 .eye.left{
   transform: translateX(-100px);
 }
+/*
+ * 右眼在右边（废话）
+ */
 .eye.right{
   transform: translateX(100px);
 }
+/*
+ * 接下来，画皮卡丘的嘴
+ */
 .mouth{
   width: 200px;
   height: 200px;
@@ -85,6 +109,9 @@ const string = `.skin *{box-sizing: border-box;margin: 0;padding: 0;}
   top: 170px;
   margin-left: -100px;
 }
+/*
+ * 上嘴唇
+ */
 .mouth .up{
   position: relative;
   top: -20px;
@@ -126,6 +153,9 @@ const string = `.skin *{box-sizing: border-box;margin: 0;padding: 0;}
 .mouth .up .lip.right::before{
   left: -6px;
 }
+/*
+ * 舌头
+ */
 .mouth .down{
   height: 180px;
   position: absolute;
@@ -156,6 +186,9 @@ const string = `.skin *{box-sizing: border-box;margin: 0;padding: 0;}
   border-radius: 100px;
 
 }
+/*
+ * 然后，画皮卡丘的脸
+ */
 .face{
   position: absolute;
   left: 50%;
@@ -171,6 +204,9 @@ const string = `.skin *{box-sizing: border-box;margin: 0;padding: 0;}
   top: 50%;
   left: 50%;
 }
+/*
+ * 将脸放到正确的位置
+ */
 .face.left{
   transform: translateX(-180px);
   background: #ff0000;
@@ -185,5 +221,8 @@ const string = `.skin *{box-sizing: border-box;margin: 0;padding: 0;}
   background: #ff0000;
   border-radius: 50%;
 }
+/*
+ * 好了，这只皮卡丘送给你
+ */
 `
 export default string;

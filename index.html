@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="zh">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -7,80 +8,99 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>皮卡丘</title>
 </head>
+
 <body>
-<style id="demo2"></style>
-<div id="demo"></div>
-<div id="buttons">
-  <button id="btnPause">暂停</button>
-  <button id="btnPlay">播放</button>
-  <button id="btnSlow">慢速</button>
-  <button id="btnNormal">中速</button>
-  <button id="btnFast">快速</button>
-</div>
-<style>
-  * {box-sizing: border-box;}
-  *::before, *::after {box-sizing: border-box;}
-  #buttons {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-right: 10px;
-  }
-  #buttons > button {
-    margin-bottom: 10px;
-    padding: 4px 8px;
-  }
-  #demo2 {
-    display: none;
-  }
-  #demo {
-    position: fixed;
-    height: 50vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border: 1px solid red;
-    overflow-y: auto;
-  }
-  #demo::-webkit-scrollbar {
-    display: none;
-  }
-  #html {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
-  }
-</style>
-<div id="html">
-  <div class="skin">
-    <div class="eye left"></div>
-    <div class="eye right"></div>
-    <div class="nose">
-      <div class="yuan"></div>
-    </div>
-    <div class="face left">
-    </div>
-    <div class="face right">
-    </div>
-    <div class="mouth">
-      <div class="up">
-        <div class="lip left"></div>
-        <div class="lip right"></div>
+  <style id="styleTag"></style>
+  <div id="code-wrapper">
+    <pre id="code"></pre>
+  </div>
+  <div id="buttons">
+    <button id="btnPause">暂停</button>
+    <button id="btnPlay">播放</button>
+    <button id="btnSlow">慢速</button>
+    <button id="btnNormal">中速</button>
+    <button id="btnFast">快速</button>
+  </div>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    #buttons {
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    #buttons>button {
+      margin-bottom: 10px;
+      padding: 4px 8px;
+    }
+
+    #styleTag {
+      display: none;
+    }
+
+    #code {
+      position: fixed;
+      height: 50vh;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border: 1px solid red;
+      overflow-y: auto;
+
+      padding: 1em;
+      margin: 0;
+    }
+
+    #code::-webkit-scrollbar {
+      display: none;
+    }
+
+    #html {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50vh;
+    }
+  </style>
+  <div id="html">
+    <div class="skin">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose">
+        <div class="yuan"></div>
       </div>
-      <div class="down">
-        <div class="yuan1">
-          <div class="yuan2"></div>
+      <div class="face left">
+      </div>
+      <div class="face right">
+      </div>
+      <div class="mouth">
+        <div class="up">
+          <div class="lip left"></div>
+          <div class="lip right"></div>
+        </div>
+        <div class="down">
+          <div class="yuan1">
+            <div class="yuan2"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<script type="module" src="/src/pika/js/index.js"></script>
+  <script type="module" src="/src/pika/js/index.js"></script>
 </body>
+
 </html>
