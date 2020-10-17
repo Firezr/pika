@@ -1,6 +1,7 @@
 const string = `.skin *{
   box-sizing: border-box;
-  margin: 0;padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .skin *::before, .skin *::after{
   box-sizing: border-box;

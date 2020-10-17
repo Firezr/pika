@@ -1,5 +1,10 @@
 import styleString from './style.js'
 
+const INTERVAL = {
+  FAST: 1,
+  NORMAL: 100,
+  SLOW: 200,
+}
 class Player {
   constructor(options){
     this.timer = null
@@ -51,19 +56,21 @@ class Player {
     this.timer = null
   }
   slowSpeed() {
+    if(this.timer === INTERVAL.SLOW) return
     this.pause()
-    this.inteveral = 300
+    this.inteveral = INTERVAL.SLOW
     this.play()
   }
   normalSpeed() {
-    if(this.timer === 100) return
+    if(this.timer === INTERVAL.NORMAL) return
     this.pause()
-    this.inteveral = 100
+    this.inteveral = INTERVAL.NORMAL
     this.play()
   }
   fastSpeed() {
+    if(this.timer === INTERVAL.FAST) return
     this.pause()
-    this.inteveral = 1
+    this.inteveral = INTERVAL.FAST
     this.play()
   }
 
