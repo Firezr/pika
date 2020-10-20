@@ -8,7 +8,7 @@ const INTERVAL = {
 class Player {
   constructor(options){
     this.timer = null
-    this.inteveral = 100
+    this.inteveral = INTERVAL.NORMAL
     this.currentIndex = 0
 
     this.styleEle = document.querySelectorAll(options.styleQuery)[0]
